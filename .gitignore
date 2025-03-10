@@ -1,0 +1,12 @@
+# Terraform files 
+.terraform/ 
+*.tfstate 
+*.tfstate.backup 
+sensitive.tfvars # Only ignores 
+sensitive.tfvars 
+*.tfplan 
+crash.log 
+crash.*.log 
+override.tf 
+override.tf.json 
+.terraform.lock.hcl
