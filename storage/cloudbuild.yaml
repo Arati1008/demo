@@ -23,18 +23,18 @@ steps:
       - |
           terraform plan
 
-  - id: 'tf aplly'
+  - id: 'tf apply'
     name: 'hashicorp/terraform:1.0.0'
     entrypoint: 'sh'
     args:
       - '-c'
       - |
-          if [["$BRANCH_NAME"=="Master"]];then
-           echo "Branch is 'Master', proceeding with terraform apply "
+          if [["$BRANCH_NAME"=="master"]];then
+           echo "Branch is 'master', proceeding with terraform apply "
           terraform apply
           exit 0  
           else
-            echo "Branch is not 'Master', skipping terraform apply"          
+            echo "Branch is not 'master', skipping terraform apply"          
             exit 0
           fi
 

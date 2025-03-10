@@ -1,4 +1,4 @@
-project_id = ""
+project_id = "arati-453310"
 bucket_name= "my-demo-bucket-name-1289"
 location= "US"
 storage_class= "STANDARD"
