@@ -1,5 +1,6 @@
 variable "project_id"{
     type= string
+    default= ""
 }
 
 variable "region"{
@@ -9,6 +10,7 @@ variable "region"{
 
 variable "bucket_name"{
     type = string
+    default = ""
 }
 
 variable "location"{
