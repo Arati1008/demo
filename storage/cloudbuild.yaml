@@ -21,6 +21,7 @@ steps:
     args:
       - '-c'
       - |
+          terraform init
           terraform plan
 
   - id: 'tf apply'

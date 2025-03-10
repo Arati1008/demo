@@ -11,3 +11,4 @@ resource "google_storage_bucket" "my_bucket" {
     prevent_destroy = true
   }
 }
+
