@@ -30,16 +30,9 @@ steps:
     args:
       - '-c'
       - |
-          if [["$BRANCH_NAME" == "master"]]; then
-            echo "Branch is 'master', proceeding with terraform apply"
-            terraform init
-            terraform plan
-            terraform apply
-            exit 0  
-          else
-            echo "Branch is not 'master', skipping terraform apply"          
-            exit 0
-          fi
+          terraform init
+          terraform plan
+          terraform apply 
 
 options:
   logging: CLOUD_LOGGING_ONLY
