@@ -39,7 +39,7 @@ steps:
           else
             echo "Branch is not 'master', skipping terraform apply"          
             exit 0
-            
+          fi  
 
 options:
   logging: CLOUD_LOGGING_ONLY
