@@ -32,8 +32,8 @@ steps:
       - |
           if [["$BRANCH_NAME"=="master"]];then
            echo "Branch is 'master', proceeding with terraform apply "
-          terraform apply
-          exit 0  
+           terraform apply
+           exit 0  
           else
             echo "Branch is not 'master', skipping terraform apply"          
             exit 0
