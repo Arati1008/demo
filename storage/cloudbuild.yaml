@@ -32,7 +32,7 @@ steps:
       - |
           terraform init
           terraform plan
-          terraform apply 
+          terraform apply --auto-approve
 
 options:
   logging: CLOUD_LOGGING_ONLY
