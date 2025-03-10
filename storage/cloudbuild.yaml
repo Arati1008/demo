@@ -30,7 +30,7 @@ steps:
     args:
       - '-c'
       - |
-          if [["$BRANCH_NAME" == "master"]]; then
+          if [[ "$BRANCH_NAME" == "master" ]]; then
             echo "Branch is 'master', proceeding with terraform apply"
             terraform init
             terraform plan
