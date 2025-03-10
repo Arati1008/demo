@@ -38,3 +38,5 @@ steps:
             exit 0
           fi
 
+options:
+  logging: CLOUD_LOGGING_ONLY
