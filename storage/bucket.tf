@@ -7,8 +7,5 @@ resource "google_storage_bucket" "my_bucket" {
     enabled=true
   }
 
-  lifecyle {
-    prevent_destroy = true
-  }
 }
 
