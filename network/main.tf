@@ -12,7 +12,7 @@ resource "google_compute_subnetwork" "subnet" {
 
 }
 
-# Create a firewall rule to allow SSH access (port 22)
+# Create a firewall rule to allow SSH  (port 22)
 resource "google_compute_firewall" "allow_ssh" {
   name    = "allow-ssh"
   network = google_compute_network.vpc_network.self_link
