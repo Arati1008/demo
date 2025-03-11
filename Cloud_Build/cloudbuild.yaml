@@ -13,6 +13,7 @@ steps:
     args:
       - '-c'
       - |
+          cd config
           terraform init
 
   - id: 'tf plan'
@@ -21,6 +22,7 @@ steps:
     args:
       - '-c'
       - |
+          cd config
           terraform init
           terraform plan
 
@@ -32,6 +34,7 @@ steps:
       - |
           if [[ "$BRANCH_NAME" == "master" ]]; then
             echo "Branch is 'master', proceeding with terraform apply"
+            cd config
             terraform init
             terraform plan
             terraform apply --auto-approve
