@@ -43,11 +43,7 @@ resource "google_compute_instance" "vm_instance" {
     access_config {
       // Automatically create an external IP
     }
-
-    access_config {
-      // Automatically create an external IP
-    }
-  }
+}
 
 
   metadata_startup_script = <<-EOT
