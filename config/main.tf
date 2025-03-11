@@ -1,13 +1,11 @@
  module "bucket"{
-    source= "../storage"
+    source        = "../storage"
     bucket_name   = var.bucket_name
     location      = var.location
-    storage_class= var.storage_class
+    storage_class = var.storage_class
 }
 
 module "network"{
-    source= "../network"
-    bucket_name   = var.bucket_name
-    location      = var.location
-    storage_class= var.storage_class
+    source        = "../network"
+    name          = var.vpc_name
 }
