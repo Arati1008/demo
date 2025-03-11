@@ -1,7 +1,0 @@
-vpc_name    = "vpc1"
-subnet_name = "subnet1"
-region      = "us-central1"
-vm_name     = "vm1"
-machine_type= "e2-medium"
-zone        = "us-central1-a"
-subnet_ip_range = "10.0.0.0/24"
