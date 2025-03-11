@@ -1,8 +1,8 @@
-variable "vpc1"{
+variable "vpc_name"{
     type= string
 }
 
-variable "subnet1"{
+variable "subnet_name"{
     type= string
 }
 
@@ -19,5 +19,9 @@ variable "machine_type"{
 }
 
 variable "zone"{
+    type = string
+}
+
+variable "subnet_ip_range"{
     type = string
 }

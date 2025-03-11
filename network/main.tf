@@ -6,7 +6,7 @@ resource "google_compute_network" "vpc_network" {
 
 resource "google_compute_subnetwork" "subnet-with-logging" {
   name          = var.subnet_name
-  ip_cidr_range = "10.2.0.0/16"
+  subnet_ip_range   = var.subnet_ip_range
   region        = var.region
   network       = google_compute_network.vpc-network.id
 
