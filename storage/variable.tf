@@ -3,8 +3,9 @@ variable "region"{
     default= "us-central1" 
 }
 
-variable "bucket_name"{
+variable "bucket_name" {
     type = string
+    default= " "
 }
 
 variable "location"{
