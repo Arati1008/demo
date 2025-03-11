@@ -4,11 +4,11 @@ resource "google_compute_network" "vpc_network" {
   mtu                     = 1460
 }
 
-resource "google_compute_subnetwork" "subnet-with-logging" {
+resource "google_compute_subnetwork" "subnet" {
   name          = var.subnet_name
-  subnet_ip_range   = var.subnet_ip_range
+  CIDR_ip_range = var.subnet_ip_range
   region        = var.region
-  network       = google_compute_network.vpc-network.id
+  network       = google_compute_network.vpc_network.id
 
 }
 

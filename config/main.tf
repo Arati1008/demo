@@ -7,12 +7,12 @@
 
 module "network"{
     source            = "../network"
-    vpc_name              = var.vpc_name
+    vpc_name          = var.vpc_name
     region            = var.region
     zone              = var.zone
     subnet_name       = var.subnet_name
     subnet_ip_range   = var.subnet_ip_range
     vm_name           = var.vm_name
-    machine_type      = var.vm_machine_type
+    machine_type      = var.machine_type
 }
 
