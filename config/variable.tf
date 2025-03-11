@@ -13,11 +13,11 @@ variable "storage_class"{
     default  = "STANDARD"
 }
 
-variable "vpc1"{
+variable "vpc_name"{
     type= string
 }
 
-variable "subnet1"{
+variable "subnet_name"{
     type= string
 }
 
