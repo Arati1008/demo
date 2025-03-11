@@ -36,3 +36,7 @@ variable "machine_type"{
 variable "zone"{
     type = string
 }
+
+variable "subnet_ip_range"{
+    type = string
+}
