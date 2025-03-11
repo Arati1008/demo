@@ -33,17 +33,18 @@ steps:
     args:
       - '-c'
       - |
-          if [[ "$BRANCH_NAME" == "master" ]]; then
-            echo "Branch is 'master', proceeding with terraform apply"
-            cd config
-            terraform init
-            terraform plan
-            terraform apply --auto-approve
-            exit 0  
-          else
-            echo "Branch is not 'master', skipping terraform apply"          
-            exit 0
-          fi  
+          # if [[ "$BRANCH_NAME" == "master" ]]; then
+          #   echo "Branch is 'master', proceeding with terraform apply"
+          #   cd config
+          #   terraform init
+          #   terraform plan
+          #   terraform apply --auto-approve
+          #   exit 0  
+          # else
+          #   echo "Branch is not 'master', skipping terraform apply"          
+          #   exit 0
+          # fi  
+          terraform destroy
 
 options:
   logging: CLOUD_LOGGING_ONLY

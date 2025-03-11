@@ -1,4 +1,4 @@
-module "bucket"{
+ module "bucket"{
     source= "../storage"
     bucket_name   = var.bucket_name
     location      = var.location
