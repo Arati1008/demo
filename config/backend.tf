@@ -1,5 +1,5 @@
 terraform {
   backend "gcs" {
-    backend= bucket_for_backend
+    bucket="bucket_for_backend"
   }
 }
