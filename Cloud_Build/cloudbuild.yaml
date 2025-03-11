@@ -1,0 +1,50 @@
+steps:
+  - id: 'branch name'
+    name: 'hashicorp/terraform:1.0.0'
+    entrypoint: 'sh'
+    args:
+    - '-c'
+    - |
+        echo "$BRANCH_NAME"
+
+  - id: 'tf init'
+    name: 'hashicorp/terraform:1.0.0'
+    entrypoint: 'sh'
+    args:
+      - '-c'
+      - |
+          ls
+          cd config
+          terraform init
+
+  - id: 'tf plan'
+    name: 'hashicorp/terraform:1.0.0'
+    entrypoint: 'sh'
+    args:
+      - '-c'
+      - |
+          cd config
+          terraform init
+          terraform plan
+
+  - id: 'tf apply'
+    name: 'hashicorp/terraform:1.0.0'
+    entrypoint: 'sh'
+    args:
+      - '-c'
+      - |
+          if [[ "$BRANCH_NAME" == "master" ]]; then
+            echo "Branch is 'master', proceeding with terraform apply"
+            cd config
+            terraform init
+            terraform plan
+            terraform apply --auto-approve
+            exit 0  
+          else
+            echo "Branch is not 'master', skipping terraform apply"          
+            exit 0
+          fi  
+
+options:
+  logging: CLOUD_LOGGING_ONLY
+         
