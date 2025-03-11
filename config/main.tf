@@ -7,7 +7,7 @@
 
 module "network"{
     source            = "../network"
-    name              = var.vpc_name
+    vpc_name              = var.vpc_name
     region            = var.region
     zone              = var.zone
     subnet_name       = var.subnet_name
