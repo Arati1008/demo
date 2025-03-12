@@ -1,5 +1,5 @@
 output "vpc_id" {
-  value = google_compute_network.vpc.self_link
+  value = google_compute_network.vpc_network.self_link
 }
 
 output "subnet_id" {
