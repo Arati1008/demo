@@ -11,9 +11,9 @@ module "network"{
     region            = var.region
     subnet_name       = var.subnet_name
     subnet_ip_range   = var.subnet_ip_range
-    vm_name           = var.vm_name
-    machine_type      = var.machine_type 
-    zone              = var.zone
+    # vm_name           = var.vm_name
+    # machine_type      = var.machine_type 
+    # zone              = var.zone
 } 
 
 
