@@ -24,6 +24,11 @@ resource "google_compute_instance" "vm_instance" {
   EOT
 }
 
+resource "google_service_account" "service_account" {
+  account_id   = "sa-test@arati-453310.iam.gserviceaccount.com"
+  display_name = "sa-test"
+}
+
 # output "vm_instance" {
 #   value = google_compute_instance.vm.name
 # }
@@ -34,3 +39,4 @@ resource "google_compute_instance" "vm_instance" {
 # output "subnet_id" {
 #   value = google_compute_subnetwork.subnet.self_link
 # }
+
