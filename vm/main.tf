@@ -25,8 +25,8 @@ resource "google_compute_instance" "vm_instance" {
 }
 
 resource "google_service_account" "service_account" {
-  account_id   = "sa-test"
-  display_name = "sa-test"
+  account_id   = "sa-test1"
+  display_name = "sa-test1"
 }
 
 # output "vm_instance" {
