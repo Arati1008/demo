@@ -20,7 +20,7 @@ module "vm"{
     vm_name           = var.vm_name
     machine_type      = var.machine_type 
     zone              = var.zone
-    network_id        = module.netwok.vpc_id
+    network_id        = module.network.vpc_id
     subnet            = module.network.subnet_id
 }
 
