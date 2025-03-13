@@ -24,6 +24,11 @@ resource "google_compute_instance" "vm_instance" {
   EOT
 }
 
+resource "google_service_account" "service_account" {
+  account_id   = "satest2"
+  display_name = "satest2"
+}
+
 # output "vm_instance" {
 #   value = google_compute_instance.vm.name
 # }
