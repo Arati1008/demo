@@ -41,3 +41,8 @@ variable "subnet_ip_range"{
     type = string
     default= ""
 }
+
+variable "service_account_email" {
+  description = "Email of the service account to be assigned to the VM"
+  type        = string
+}

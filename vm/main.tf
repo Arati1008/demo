@@ -22,11 +22,16 @@ resource "google_compute_instance" "vm_instance" {
     #!/bin/bash
     echo "Hello, World!" > /var/log/startup-script.log
   EOT
-}
 
-resource "google_service_account" "service_account" {
-  account_id   = "sa-test1"
-  display_name = "sa-test1"
+
+# resource "google_service_account" "service_account" {
+#   account_id   = "sa-test1"
+#   display_name = "sa-test1"
+# }
+service_account {
+    email  = var.service_account_email
+    scopes = ["https://www.googleapis.com/auth/cloud-platform"]  # Define necessary scopes
+  }
 }
 
 # output "vm_instance" {
