@@ -10,8 +10,8 @@ resource "google_compute_instance" "vm_instance" {
   }
 
   network_interface {
-    network = google_compute_network.vpc_network.vpc_id
-    subnetwork = google_compute_subnetwork.subnet.subnet_id
+    network = var.network_id
+    subnetwork = var.subnet
     access_config {
       // Automatically create an external IP
     }

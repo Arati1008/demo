@@ -9,3 +9,15 @@ variable "machine_type"{
 variable "zone"{
     type = string
 }
+
+variable "subnet" {
+   type = string
+}
+
+variable "network_id" {
+    type = string
+  }
+
+variable "subnet" {
+    type = string
+  }
