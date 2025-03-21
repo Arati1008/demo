@@ -12,7 +12,6 @@
 #   members = [
 #     "serviceAccount:${google_service_account.vm_service_account.email}"
 #   ]
-  
 # }
 
 # module "bucket"{
