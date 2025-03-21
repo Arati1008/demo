@@ -7,13 +7,12 @@ resource "google_service_account" "vm_service_account" {
 # Assign roles to the service account (giving it permissions to manage compute instances)
 resource "google_project_iam_binding" "vm_service_account_binding" {
   project = "arati-453310"  # Replace with your GCP project ID
-
-#   role    = "roles/compute.instanceAdmin"  # Role to manage compute instances
-#   members = [
-#     "serviceAccount:${google_service_account.vm_service_account.email}"
-#   ]
+  role    = "roles/compute.instanceAdmin"  # Role to manage compute instances
+  members = [
+    "serviceAccount:${google_service_account.vm_service_account.email}"
+  ]
   
-# }
+}
 
 module "bucket"{
     source        = "../storage"
