@@ -24,10 +24,7 @@ resource "google_compute_instance" "vm_instance" {
   EOT
 
 
-# resource "google_service_account" "service_account" {
-#   account_id   = "sa-test1"
-#   display_name = "sa-test1"
-# }
+
 service_account {
     email  = var.service_account_email
     scopes = ["https://www.googleapis.com/auth/cloud-platform"]  # Define necessary scopes
@@ -45,3 +42,7 @@ service_account {
 #   value = google_compute_subnetwork.subnet.self_link
 # }
 
+# resource "google_service_account" "service_account" {
+#   account_id   = "sa-test1"
+#   display_name = "sa-test1"
+# }

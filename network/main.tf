@@ -9,7 +9,6 @@ resource "google_compute_subnetwork" "subnet" {
   ip_cidr_range = var.subnet_ip_range
   region        = var.region
   network       = google_compute_network.vpc_network.self_link
-
 }
 
 # Create a firewall rule to allow SSH  (port 22)
