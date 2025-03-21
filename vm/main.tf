@@ -10,8 +10,8 @@ resource "google_compute_instance" "vm_instance" {
   }
 
   network_interface {
-    network = google_compute_network.vpc_network.self_link
-    subnetwork = google_compute_subnetwork.subnet.self_link
+    network = var.network_id
+    subnetwork = var.subnet
     access_config {
       // Automatically create an external IP
     }
@@ -22,11 +22,13 @@ resource "google_compute_instance" "vm_instance" {
     #!/bin/bash
     echo "Hello, World!" > /var/log/startup-script.log
   EOT
-}
 
-resource "google_service_account" "service_account" {
-  account_id   = "satest2"
-  display_name = "satest2"
+
+
+service_account {
+    email  = var.service_account_email
+    scopes = ["https://www.googleapis.com/auth/cloud-platform"]  # Define necessary scopes
+  }
 }
 
 # output "vm_instance" {
@@ -38,4 +40,9 @@ resource "google_service_account" "service_account" {
 
 # output "subnet_id" {
 #   value = google_compute_subnetwork.subnet.self_link
+# }
+
+# resource "google_service_account" "service_account" {
+#   account_id   = "sa-test1"
+#   display_name = "sa-test1"
 # }
