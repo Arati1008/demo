@@ -38,7 +38,7 @@ module "vm"{
     subnet            = module.network.subnet_id
 
 #      # Assign the service account to the VM
-#   service_account_email = google_service_account.vm_service_account.email
-# }
+  service_account_email = google_service_account.vm_service_account.email
+}
 
 
