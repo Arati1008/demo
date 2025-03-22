@@ -1,18 +1,18 @@
-# # Create a Service Account
-# resource "google_service_account" "vm_service_account" {
-#   account_id   = "vm-service-account"
-#   display_name = "Service Account for VM"
-# }
+# Create a Service Account
+resource "google_service_account" "vm_service_account" {
+  account_id   = "vm-service-account"
+  display_name = "Service Account for VM"
+}
 
-# # Assign roles to the service account (giving it permissions to manage compute instances)
-# resource "google_project_iam_binding" "vm_service_account_binding" {
-#   project = "arati-453310"  # Replace with your GCP project ID
-#   role    = "roles/compute.instanceAdmin"  # Role to manage compute instances
-#   members = [
-#     "serviceAccount:${google_service_account.vm_service_account.email}"
-#   ]
+# Assign roles to the service account (giving it permissions to manage compute instances)
+resource "google_project_iam_binding" "vm_service_account_binding" {
+  project = "arati-453310"  # Replace with your GCP project ID
+  role    = "roles/compute.instanceAdmin"  # Role to manage compute instances
+  members = [
+    "serviceAccount:${google_service_account.vm_service_account.email}"
+  ]
   
-# }
+}
 
 module "bucket"{
     source        = "../storage"
