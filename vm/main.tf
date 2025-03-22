@@ -30,19 +30,3 @@ service_account {
     scopes = ["https://www.googleapis.com/auth/cloud-platform"]  # Define necessary scopes
   }
 }
-
-# output "vm_instance" {
-#   value = google_compute_instance.vm.name
-# }
-# output "vpc_id" {
-#   value = google_compute_network.vpc.self_link
-# }
-
-# output "subnet_id" {
-#   value = google_compute_subnetwork.subnet.self_link
-# }
-
-# resource "google_service_account" "service_account" {
-#   account_id   = "sa-test1"
-#   display_name = "sa-test1"
-# }
