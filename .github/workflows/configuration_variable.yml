@@ -1,0 +1,17 @@
+name : Configuration Variable
+on : 
+ workflow_dispatch
+
+env:
+ cloud: Google_Cloud
+
+jobs:
+ greeting_job:
+    runs-on: ubuntu-latest
+    env:
+      Greeting: Hello
+    steps:
+      - name: "Say Hello Mona it's Monday"
+        run: echo "$Greeting $First_Name is using $cloud and Project ID is ${{var.PROJECTID}}!"
+        env:
+          First_Name: Arati
